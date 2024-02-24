@@ -1,0 +1,263 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+    font-family:'mulish',Sans-Serif;
+    font-size: 16px;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+ height: 215px;
+  width: 360px;
+  border-radius: 1rem;
+  top: 10px;
+  perspective: 500px;
+  position: relative;
+  cursor: pointer;
+  font-family: Monospace;
+}
+.card_inner{
+  height: 100%;
+  width: 100%;
+  border-radius: 0.6rem;
+  transition: transform 600ms ease;
+  transform-style: preserve-3d;
+  background-image: url('card.jpg');
+  background-size: cover
+  background-repeat: no-repeat;
+}
+.card:hover .card_inner{
+  transform: rotateY(180deg);
+}
+.card_front,.card_inner{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem
+  overflow: hidden;
+  backface-visibility: hidden;
+  color: white;
+  
+}
+.card_front{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
+}
+.card_back{
+  transform: rotateY(180deg);
+  border: 0.1px solid black;
+  height: 100%;
+  border-radius: 0.6rem;
+  backface-visibility: hidden;
+  background-image: url('card.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chip{
+  position: relative;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom left,#ffecc7,#d0b978);
+}
+.chip.chip-line{
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-image: #303030;
+}
+.chip .chip-line:nth-child(1){
+  top: 13px;
+}
+.chip .chip-line:nth-child(2){
+  top: 20px;
+}
+.chip .chip-line:nth-child(3){
+  top: 28px;
+}
+.chip .chip-line:nth-child(4){
+  left:25px;
+  width: 1px;
+  height: 50px;
+}
+.chip .chip-main{
+  height: 1.25rem;
+  width: 1.20rem;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-image: linear-gradient(to bottom left,#efdbab,#e1cb94);
+  z-index: 1;
+  position: absolute;
+  
+}
+.logo{
+  height: 30px;
+  width: 30px;
+  background-image: url('logo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 25px;
+  top:25%;
+  z-index: 44;
+}
+
+.h1{
+  width:50px;
+  height: 1px;
+  background-color: black;
+}
+.h2{
+  width:50px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 12px;
+}
+.h3{
+  width:50px;
+  height: 1.1px;
+  background-color: black;
+  position: absolute;
+  bottom: 12px;
+}
+.h4{
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  left: 25px;
+  
+}
+.wave{
+  position: absolute;
+  top:4.25rem;
+  left: 4.5rem;
+  width: 2.5rem;
+  height: 2.5rem;;
+}
+.card-number{
+  display: flex;
+  margin-top: auto;
+  position:relative ;
+  bottom: 30px;
+  gap: 1.75rem;
+  font-size: 1.6rem;
+}
+.bs{
+  font-size: 15px;
+  position: absolute;
+  top: 10px;
+}
+.cc{
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  text-transform: uppercase;
+}
+.card-holder{
+  text-transform: uppercase;
+}
+.card-info__bottom{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ .exp-date{
+  position: absolute;
+ right: 62px;
+ bottom: 10px;
+}
+.mastercard{
+  display: absolute;
+  
+}
+.mastercard .circle{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  bottom: 8px;
+  
+  
+}
+.mastercard .circle--red{
+  background: #eb001b;
+  position: absolute;
+  right:28px;
+}
+.mastercard .circle--yellow{
+  margin-left: -0.7rem;
+  background: rgba(255,209,0,0.6);
+  position: absolute;;
+  right: 10px;
+  
+}
+
+.card-strip{
+  min-height: 3rem;
+  width: 100%;
+  margin-top: 2.5rem;
+  background: #000000;
+}
+.card-signature{
+  background: white;
+  display: flex;
+  justify-content: center
+  align-items: center;
+  color: #021318;
+  font-family:'allura',cursive;
+  padding: 0.1rem,4rem;
+  font-size: 1.75rem;
+  height: 2rem;
+  font-weight: bold;
+  width: 15rem;
+  position: relative;
+ 
+}
+.card-ccv{
+  background-color: white;
+  height: 1.5rem;
+  font-weight: bold;
+  padding: 0 0.25rem;
+  display: flex;
+  align-self: end;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.card-signature-field{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.card-signature-headline{
+  content: 'authorized-signature';
+  color: white;
+  font-size: 0.75rem;
+}
+.card-signature-wrapper{
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  color: black;
+  padding: 0 2rem;
+}
